@@ -1,0 +1,12 @@
+<div>
+    <h1>My Goals</h1>
+    <hr>
+    <ul>
+        <li *ngFor='let goal of goal'>
+            {{goal.name}}
+            <app-goal-detail [goal]='goal'></app-goal-detail>
+        </li>
+    </ul>
+<p>{{goal.description}}</p>
+<button (click)= 'goalComplete(true)'>Delete</button>
+</div>
